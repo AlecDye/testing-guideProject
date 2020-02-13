@@ -1,9 +1,14 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
-
-test('renders learn react link', () => {
+// Arrange, Act, Assert
+test('renders animal form header', () => {
+  // Arrange
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // Act
+  const header = getByText(/add new animal/i);
+
+  // Assert
+  expect(header).toBeInTheDocument();
 });
